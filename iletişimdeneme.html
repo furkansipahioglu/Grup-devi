@@ -22,7 +22,7 @@
     ></script>
 
     <link rel="stylesheet" href="stylefurkan.css" />
-    
+    <link rel="stylesheet" href="style3.scss" />
     
   </head>
 
@@ -296,277 +296,174 @@
           <br />
         
         <div class="formsContactForm forms border border-3 px-4 py-2" id="iletişimform" style="display: block;">
-            <div class="col-sm-6 text-center" style="max-width: 100%; display: inline; margin-bottom: 50px ;">
-                <h4>Bizimle İletişime Geçebilirsiniz</h4>
-                <p class="support-description">
-          <br>
-                </p>
-                <!-- Success message 
-                <div class="alert alert-success" role="alert" id="success">
-                    <p>Your message was sent succssfully! We will be in touch as soon as possible.</p>
-                </div>
-                <!-- Error message 
-                <div class="alert alert-error" role="alert" id="error">
-                    <p>Something went wrong, verify the fields or try refreshing the page.</p>
-                </div>-->
-                <form action="sender/mailci.php" method="post" id="contact" name="contact" class="form-horizontal contact-form">
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <div class="col-sm-12 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="sender_name" id="sender_name" placeholder="Adınız (gerekli)" class="form-control" required>
-                            </div>
-                        </div>
-                    </div>
-          
-                    <div class="form-group">
-                        <div class="col-sm-12 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-book"></i></span>
-                                <input name="subject" id="subject" placeholder="Konu (gerekli)" class="form-control" required>
-                            </div>
-                        </div>
-                    </div>
-          
-          
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <div class="col-sm-12 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input name="email" id="email" placeholder="Eposta (gerekli)" class="form-control" required>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <div class="col-sm-12 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
-                                <input name="phone" id="phone" placeholder="Telefon" class="form-control">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Text input-->
-                    <div class="form-group">
-                        <div class="col-sm-12 inputGroupContainer">
-                            <div class="input-group">
-                                <textarea name="message" id="message" class="form-control"
-                                          placeholder="Mesajınız (gerekli)" required></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Text input
-              <div class="form-group">
-                   <div class="col-sm-12 inputGroupContainer">
-                   <div class="input-group">
-                       <span class="input-group-addon"><i class="glyphicon glyphicon-check"></i></span>
-                       <input name="captcha" id="captcha" placeholder="4 + 1 = ?" class="form-control" required>
-                   </div>
-                 </div>
-               </div>-->
-                    <!-- Submit Button -->
-                    <div class="form-group sub">
-                        <div class="col-sm-12">
-                            <button type="submit" name="name" class="btn btn-warning submit">Gönder</button>
-                        </div>
-                    </div>
-                </form>
+          <fieldset>
+            <legend>Contact me</legend>
+            <div class="form-control">
+              <label for="name">Name</label>
+              <input type="name" id="name" placeholder="Enter your name" required />
             </div>
+    
+            <div class="form-control">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+    
+            <div class="form-control">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Enter your message"
+                required
+              ></textarea>
+            </div>
+            <input type="submit" value="Send" class="submit-btn" />
+          </fieldset>
       </div>
       <div class="formsProjectForm forms border border-3 px-4 py-2"  id="projeform"style="display: none;">
-       <!-- form gelcek-->   
-       <form>
-        <div class="banner">
-          <h1 style="color:floralwhite;">Proje Formu</h1>
-        </div>
-        <br/>
-        <fieldset>
-          <legend>Kişisel Bilgiler</legend>
-          <div class="colums">
-            <div class="item">
-              <label for="fname">Adınız<span>*</span></label>
-              <input id="fname" type="text" name="fname" required />
-            </div>
-            <div class="item">
-              <label for="lname">Soyadınız<span>*</span></label>
-              <input id="lname" type="text" name="lname"  required/>
-            </div>
-            <div class="item">
-              <label for="address">Mail Adresi<span>*</span></label>
-              <input id="address" type="text"   name="address" required/>
-            </div>
-            <div class="item">
-              <label for="phone">Telefon</label>
-              <input id="phone" type="tel"   name="phone"/>
-            </div>
-            
-            
-        </fieldset>
-        
-        <br/>
-        <fieldset>
-        <legend>Firma Bilgileri</legend>
-        <div class="item">
-            <label for="fname">Firma Adı<span>*</span></label>
-            <input id="fname" type="text" name="fname" required />
-          </div>
-          <div class="item">
-            <label for="lname">Firmadaki Pozisyonunuz<span>*</span></label>
-            <input id="lname" type="text" name="lname" required />
-          </div>
-          <div class="item">
-            <label for="lname">Firma Web Sitesi<span>*</span></label>
-            <input id="lname" type="text" name="lname" required/>
-          </div>
-          <div class="item">
-            <label for="phone">Firma Telefon Numarası</label>
-            <input id="phone" type="tel"   name="phone"/>
-          </div>
-        </fieldset>
-        <fieldset>
-            <legend>Proje Bilgileri</legend>
-            <div class="item">
-                <label for="fname">Proje Adı<span>*</span></label>
-                <input id="fname" type="text" name="fname" required/>
-              </div>
-              <div class="item">
-                <label for="donation">Proje Detayları</label>
-                <textarea id="donation" rows="3" required></textarea>
-                </div>
-    
-            </fieldset>
-            <div class="btn-block">
-                <button style="width: 150px;
-                padding: 10px;
-                border: none;
-                border-radius: 5px; 
-                background:  #1c87c9;
-                font-size: 16px;
-                color: #fff;
-                cursor: pointer;" onMouseOver="this.style.color='red'"
-        onMouseOut="this.style.color='white'" class="btn btn-warning submit" type="order" href="/">Confirm Order</button>
-                </div>
-      </form>
-
-
-
-
-
-
-
-
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-      <div class="formsApplicationForm forms border border-3 px-4 py-2" id="başvuruform" style="display: none;">
-         
-        <form>
-            <div class="banner">
-              <h1 style="color:floralwhite;">Başvuru Formu</h1>
-            </div>
-            <br/>
-            
-            
-            <br/>
-            <fieldset>
-            <legend>Firma Bilgileri</legend>
-            <div class="item">
-                <label for="fname">Adınız<span>*</span></label>
-                <input id="fname" type="text" name="fname" required />
-              </div>
-              <div class="item">
-                <label for="lname">Soyadınız<span>*</span></label>
-                <input id="lname" type="text" name="lname" required/>
-              </div>
-              <div class="item">
-                <label for="lname">Web Sitesi<span>*</span></label>
-                <input id="lname" type="text" name="lname" required/>
-              </div>
-              <div class="item">
-                <label for="address">Mail Adresi<span>*</span></label>
-                <input id="address" type="text"   name="address"required />
-              </div>
-              <div class="item">
-                <label for="phone">Telefon</label>
-                <input id="phone" type="tel"   name="phone"/>
-              </div>
-              <div class="item">
-                <label for="lname">Github<span>*</span></label>
-                <input id="lname" type="text" name="lname" required />
-              </div>
-              <div class="item">
-                <label for="lname">Linkedin<span>*</span></label>
-                <input id="lname" type="text" name="lname" required/>
-              </div>
-              <div class="item">
-                <label for="lname">Cv URL<span>*</span></label>
-                <input id="lname" type="text" name="lname" required />
-              </div>
-            </fieldset>
-            <fieldset>
-                <legend>Proje Bilgileri</legend>
-                <div class="item">
-                    <p>Başvurduğunuz Pozisyon</p>
-                    <select>
-                      <option value=""></option>
-                      <option value="1">*Please select*</option>
-                      <option value="2">Seçenek 1</option>
-                      <option value="3">Seçenek 2</option>
-                      <option value="4">Seçenek 3</option>
-                      <option value="5">Seçenek 4</option>
-                    </select>
+          <h4 class="my-3">Kişisel Bilgiler</h4>
+          <div>
+              <div class="my-2 row">
+                  <label for="personName" class="col-sm-2 col-form-label">İsim*:</label>
+                  <div class="col-sm-10">
+                      <input type="text" class="form-control" id="personName">
                   </div>
-                  <div class="item">
-                    <label for="donation">Proje Detayları</label>
-                    <textarea id="donation" rows="3"></textarea>
-                    </div>
-        
-                </fieldset>
-                <div class="btn-block">
-                    <button style="width: 150px;
-                    padding: 10px;
-                    border: none;
-                    border-radius: 5px; 
-                    background:  #1c87c9;
-                    font-size: 16px;
-                    color: #fff;
-                    cursor: pointer; " onMouseOver="this.style.color='red'"
-        onMouseOut="this.style.color='white'" class="btn btn-warning submit" type="order" href="/">Confirm Order</button>
-                    </div>
-          </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
+              </div>
+              <div class="my-2 row">
+                  <label for="phoneNumber" class="col-sm-2 col-form-label">Tel No*:</label>
+                  <div class="col-sm-10">
+                      <input type="phone" class="form-control" id="phoneNumber">
+                  </div>
+              </div>
+              <div class="my-2 row">
+                  <label for="email" class="col-sm-2 col-form-label">E-Posta*:</label>
+                  <div class="col-sm-10">
+                      <input type="email" class="form-control" id="email">
+                  </div>
+              </div>
+          </div>
+          <h4 class="my-3">Firma Bilgiler</h4>
+          <div>
+              <div class="my-2 row">
+                  <label for="companyName" class="col-sm-2 col-form-label">Firma Adı*:</label>
+                  <div class="col-sm-10">
+                      <input type="text" class="form-control" id="companyName">
+                  </div>
+              </div>
+              <div class="my-2 row">
+                  <label for="workerPosition" class="col-sm-2 col-form-label">Firmadaki Pozisyonunuz:</label>
+                  <div class="col-sm-10">
+                      <input type="text" class="form-control" id="workerPosition">
+                  </div>
+              </div>
+              <div class="my-2 row">
+                  <label for="companyWebSite" class="col-sm-2 col-form-label">Firma Web Sitesi:</label>
+                  <div class="col-sm-10">
+                      <input type="text" class="form-control" id="companyWebSite">
+                  </div>
+              </div>
+              <div class="my-2 row">
+                  <label for="companyPhone" class="col-sm-2 col-form-label">Firma Telefonu:</label>
+                  <div class="col-sm-10">
+                      <input type="text" class="form-control" id="companyPhone">
+                  </div>
+              </div>
+          </div>
+          <h4 class="my-3">Proje Bilgileri</h4>
+          <div>
+              <div class="my-2 row">
+                  <label for="projectName" class="col-sm-2 col-form-label">Proje Adı*:</label>
+                  <div class="col-sm-10">
+                      <input type="text" class="form-control" id="projectName">
+                  </div>
+              </div>
+              <div class="my-3">
+                  <label for="projectDetails" class="form-label">Proje Detayları: </label>
+                  <textarea class="form-control" id="projectDetails" rows="5"
+                      style="resize: none;"></textarea>
+              </div>
+          </div>
+          <div>
+              <div class="my-2 row align-items-center">
+                  <label class="col-sm-3 col-form-label">Dönüş Şekli: </label>
+                  <div class="col-sm-9">
+                      <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                              id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">Mail</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                              id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">Telefon</label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="formSend p-3">
+              GÖNDER
+          </div>
       </div>
-
-
-
-
-
-
-
-
+      <div class="formsApplicationForm forms border border-3 px-4 py-2" id="başvuruform" style="display: none;">
+          <h4 class="my-3">Başvuru Bilgileri</h4>
+          <div class="row justify-content-between">
+              <div class="my-2 col-md-6">
+                  <label for="applicationPersonName" class="form-label">Adınız-Soyadınız*</label>
+                  <input type="text" class="form-control" id="applicationPersonName">
+              </div>
+              <div class="my-2 col-md-6">
+                  <label for="applicationPosition" class="form-label">Başvurduğunuz Pozisyon*</label>
+                  <input type="text" class="form-control" id="applicationPosition">
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="my-2">
+                      <label for="applicationPersonWebsite" class="form-label">Kişisel Web Siteniz(isteğe
+                          bağlı)</label>
+                      <input type="text" class="form-control" id="applicationPersonWebsite">
+                  </div>
+                  <div class="my-2">
+                      <label for="applicationEmail" class="form-label">E-posta*</label>
+                      <input type="email" class="form-control" id="applicationEmail">
+                  </div>
+                  <div class="my-2">
+                      <label for="applicationPhone" class="form-label">Telefon*</label>
+                      <input type="phone" class="form-control" id="applicationPhone">
+                  </div>
+                  <div class="my-2">
+                      <label for="applicationGithub" class="form-label">Github*</label>
+                      <input type="text" class="form-control" id="applicationGithub">
+                  </div>
+                  <div class="my-2">
+                      <label for="applicationLinkedin" class="form-label">Linkedin*</label>
+                      <input type="text" class="form-control" id="applicationLinkedin">
+                  </div>
+                  <div class="my-2">
+                      <label for="applicationCv" class="form-label">Cv Url*</label>
+                      <input type="text" class="form-control" id="applicationLinkedin">
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="my-2 h-100">
+                      <label for="applicationMessage" class="form-label">Mesajınız
+                      </label>
+                      <textarea class="form-control" id="applicationMessage" rows="17"
+                          style="resize: none;"></textarea>
+                      <!-- style="resize: none;" -->
+                  </div>
+              </div>
+          </div>
+          <div class="formSend p-3 mt-1">
+              GÖNDER
+          </div>
+      </div>
   </div>
 </div>
 </div>
